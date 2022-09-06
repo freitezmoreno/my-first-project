@@ -7,7 +7,16 @@
 
 /*Pagina de Index*/
 
+#grid-container {
+   display: grid;
+   grid-template-areas: 
+   "logo header header"
+   "intro intro intro"
+   "footer footer footer";
+}
+
 #header {
+   grid-area: header;
     width: 100%;
     height: 80px;
     padding: 5px;
@@ -18,6 +27,7 @@
     background: linear-gradient(to left, black, white);
 }
 #header .header__logo {
+   grid-area: logo;
    height: 70px;
    width: 190px;
    display: flex; flex-direction: row;
@@ -48,6 +58,7 @@
 #intro {
    width: 100%;
    background-color: white;
+   grid-area: intro;
 }
 #intro .intro__titulo {
    font-style: italic;
@@ -79,12 +90,8 @@
    padding: 2px;
    text-align: center;
 }
-#desarrollo {
-   width: 100%;
-   height: auto;
-   padding: 50px 0px;
-}
 #footer {
+   grid-area: footer;
    display: flex; flex-direction: row;
    justify-content: space-between;
    align-items: center;
@@ -147,6 +154,7 @@
 #desarrolloServicios {
    padding: 50px 20px;
    width: 100%;
+   
 }
 #desarrolloServicios .desarrollo__titulo {
    font-size: 20px;
@@ -185,3 +193,77 @@
 }  
 
 /*Pagina de Equipo*/
+
+#equipo .intro__items {
+   padding-top: 100px;
+
+}
+#equipo .intro__img {
+   justify-content: center;
+}
+
+#equipo .intro__img .intro__equipo{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+}
+#equipo .intro__img .grid-pilar{
+   justify-content: left;
+}
+
+/*responsive*/
+
+@media (max-width: 768px) {
+    .header__menu {
+      display: none;
+      background-color: aqua;
+ }
+}
+
+@media (min-width: 769px) {
+   #menu-check, #menu {
+         display: none;
+        background-color: blue;
+    }
+ }
+
+ /*menú hamburguesa*/
+
+ #menu-check:not(:checked) nav {
+   display: none;
+ }
+
+ #menu-check:checked nav {
+   display: block;
+ }
+
+ #menu {
+   display: block;
+   color: black;
+   background-color: white;
+   z-index: 10;
+ }
+ #menu:hover {
+   color: black;
+   background-color: beige;
+ }
+ .header__menu {
+   position: absolute;
+   top: 0;
+   right: 0;
+   height: 100%;
+   background-color: lightgray;
+ }
+ .header__menu nav ul a {
+   color: lightslategray;
+   background: none;
+ }
+ .header__menu nav ul li {
+   display: block;
+   text-align: right;
+ }
+
+
+
+
+

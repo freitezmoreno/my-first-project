@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./Css/style.css">
 </head>
 
-<body>
+<body id="grid-container">
     <header id="header">
         <div class="header__logo">
             <p><img src="./Assets/img/Logo.jpeg" alt="logo"></p>
@@ -17,6 +17,13 @@
                 <p>Estudio.</p>
             </div>
         </div>
+
+        <input type="checkbox" id="menu-check">
+        <label id="menu" for="menu-check">
+            <span id="menu-abrir">&#9776;</span>
+            <span id="menu-cerrar">X</span>
+        </label>
+
         <nav class="header__menu">
             <ul>
                 <li><a href="./index.html">Home</a></li>
@@ -62,11 +69,6 @@
             </div>
         </div>
     </main>
-
-    <aside id="desarrollo">
-            <p>aside</p>
-            <p>Lorem ipsum dolor sit amet.</p>
-    </aside>
 
     <footer id="footer">
         <div class="footer__icons">
